@@ -1,0 +1,5 @@
+mutation EditComment($message: String, $isPublic: Boolean, $commentId: ID!)  {
+    editComment(message: $message, isPublic: $isPublic, id: $commentId) {
+        ...CommentDetails
+    }
+}

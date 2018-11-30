@@ -1,0 +1,17 @@
+query Feed {
+    feed {
+        id
+        message
+        createdAt
+        author {
+            name
+        }
+        children {
+            message
+            id
+            author {
+                name
+            }
+        }
+    }
+}

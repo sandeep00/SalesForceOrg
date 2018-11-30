@@ -1,0 +1,22 @@
+query CommentDetail($id: ID!) {
+    comment(id: $id) {
+        ...CommentDetails
+    }
+}
+
+fragment CommentDetails on Comment {
+    
+    id
+    message
+    createdAt
+    author {
+        name
+    }
+    children {
+        message
+        id
+        author {
+            name
+        }
+    }
+}

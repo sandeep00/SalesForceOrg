@@ -1,0 +1,5 @@
+mutation CreateComment($message: String!, $isPublic: Boolean!, $parentCommentId: ID)  {
+    createComment(message: $message, isPublic: $isPublic, parentCommentId: $parentCommentId) {
+        ...CommentDetails
+    }
+}
